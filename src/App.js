@@ -22,7 +22,7 @@ const removeMovie = (movie) => {
 }
 
 const getData = () => {
-  axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=585bc3a6485d97dbd7ef33d8a9320ae3&language=en-US&page=${page}`)
+  axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${page}`)
   .then((res)=> {
     // console.log(res.data.results);
     setMovieList(res.data.results);
